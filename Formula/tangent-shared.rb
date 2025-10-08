@@ -1,25 +1,25 @@
 class TangentShared < Formula
   desc "The tangent-shared application"
-  homepage "https://github.com/Santiago-Labs/tangent"
+  homepage "https://github.com/telophasehq/tangent"
   version "0.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Santiago-Labs/tangent/releases/download/v0.1.0/tangent-shared-aarch64-apple-darwin.tar.xz"
-      sha256 "e3a46a7fc9c6bd3e3aff09cc02f5295b1b03d97c0db0a80736453dccae0640f6"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/tangent-shared-aarch64-apple-darwin.tar.xz"
+      sha256 "943ec1933608d969611ef40f4c4cea78e2c9b6319877dd951888cc1b3b736ef1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Santiago-Labs/tangent/releases/download/v0.1.0/tangent-shared-x86_64-apple-darwin.tar.xz"
-      sha256 "95ce0bfd91a8639b72213cb99939f6a7153a6c676b31f6e7d2a09ed311697c0a"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/tangent-shared-x86_64-apple-darwin.tar.xz"
+      sha256 "b73cc7c62a29734c48a131a74d99fd56213b6ad04d9bdcb2f8649a34dd764bf7"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Santiago-Labs/tangent/releases/download/v0.1.0/tangent-shared-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "766903724e312bc577bbbfefa6b94fff2c86e1c9c6c107783a0207407ef52636"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/tangent-shared-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "59664816840a11278b3019a4c57fa4a928f168112658496a5cd9fa7270cbe654"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Santiago-Labs/tangent/releases/download/v0.1.0/tangent-shared-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f9a18a4ffb69dcad8fdeb23d7027abefe967bb96eacce7a65d84a4ab78df02be"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/tangent-shared-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "039b25ef03d56590b95bdb091d2e9438a3ac29d4128522ff9ffac7204b8e40e8"
     end
   end
 
@@ -46,10 +46,10 @@ class TangentShared < Formula
   end
 
   def install
-    bin.install "core-cli" if OS.mac? && Hardware::CPU.arm?
-    bin.install "core-cli" if OS.mac? && Hardware::CPU.intel?
-    bin.install "core-cli" if OS.linux? && Hardware::CPU.arm?
-    bin.install "core-cli" if OS.linux? && Hardware::CPU.intel?
+    bin.install "shared-cli" if OS.mac? && Hardware::CPU.arm?
+    bin.install "shared-cli" if OS.mac? && Hardware::CPU.intel?
+    bin.install "shared-cli" if OS.linux? && Hardware::CPU.arm?
+    bin.install "shared-cli" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
