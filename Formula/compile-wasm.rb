@@ -1,25 +1,25 @@
 class CompileWasm < Formula
   desc "The compile-wasm application"
-  homepage "https://github.com/Santiago-Labs/tangent"
+  homepage "https://github.com/telophasehq/tangent"
   version "0.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Santiago-Labs/tangent/releases/download/v0.1.0/compile-wasm-aarch64-apple-darwin.tar.xz"
-      sha256 "6d12dce1f398cc13b6f011466e59958cb4664129493fcdf80248c2f2f73d2df1"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/compile-wasm-aarch64-apple-darwin.tar.xz"
+      sha256 "ad56456157b24c447c1fd8c92cf52a62a71b20ab06518d3747b32ef8527f4dff"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Santiago-Labs/tangent/releases/download/v0.1.0/compile-wasm-x86_64-apple-darwin.tar.xz"
-      sha256 "f26ba09bf4d3d02ab525a3ab5b3b2ff2881c86bdcf77d8309f5d5c01bf5c54c9"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/compile-wasm-x86_64-apple-darwin.tar.xz"
+      sha256 "e6d62e37236a43a7bf0d16afdc0b9c1293a43c7b657c7810e3539074613dd36c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Santiago-Labs/tangent/releases/download/v0.1.0/compile-wasm-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "938891ab327f4937222d8c533864900ad9536dbc7a15b7ee0a3fb75aef1578d8"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/compile-wasm-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0c0f800fbe59d7239dd616d4199848de58c25c1d3970d8dd720c192dd46a006a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Santiago-Labs/tangent/releases/download/v0.1.0/compile-wasm-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "526b788a881b55e22eb851f70214a5db6b24e41d1a04a6e42a8a46e32de96b37"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/compile-wasm-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "6eced5121267b2ffc2ff322f131347d100440a360e674f342441015ee14fd853"
     end
   end
 
