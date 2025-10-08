@@ -1,25 +1,25 @@
 class TangentRuntime < Formula
   desc "The tangent-runtime application"
-  homepage "https://github.com/Santiago-Labs/tangent"
+  homepage "https://github.com/telophasehq/tangent"
   version "0.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Santiago-Labs/tangent/releases/download/v0.1.0/tangent-runtime-aarch64-apple-darwin.tar.xz"
-      sha256 "f4871feb5ccf174c124bb71d0d24b59f8e3d5476f496a623f7036ef81f74a1eb"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/tangent-runtime-aarch64-apple-darwin.tar.xz"
+      sha256 "bedcadb4252475da598d994b6b29988f54dedbbe568e10c72707f89b1c1f86bd"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Santiago-Labs/tangent/releases/download/v0.1.0/tangent-runtime-x86_64-apple-darwin.tar.xz"
-      sha256 "6ee69ab35c8e510f55daeb74d7619f8f27355d557ce029714d0b9bc67c56621e"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/tangent-runtime-x86_64-apple-darwin.tar.xz"
+      sha256 "d838411736303284ade87e3eece6c8f2f153a17a11f5b64c3819babf4e59621b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Santiago-Labs/tangent/releases/download/v0.1.0/tangent-runtime-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "39548c4cf1b18cf1a06a2902a390a149b51bfaf8d6ec7eeb4553faba3b96dd9d"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/tangent-runtime-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "34bd7a66930b70f99ae215ffec565945340e49e3cfa3cdd43ce6a93c3ff09c8e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Santiago-Labs/tangent/releases/download/v0.1.0/tangent-runtime-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f21b27ffc63fa6d7bc8914520012508af8869ae9269ab20d9f16ca99a72102f8"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/tangent-runtime-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "52fbc922283a02241a62454150ec13cae7e824768f121ca5da6bdd5d4b8376d2"
     end
   end
 
