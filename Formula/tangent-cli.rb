@@ -1,25 +1,25 @@
 class TangentCli < Formula
   desc "The tangent-cli application"
   homepage "https://github.com/telophasehq/tangent"
-  version "0.1.0"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/tangent-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "6815cffc5aaa856f9dab13428343cebf356411a5dc86459b375e44d6e2ccae7c"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.2/tangent-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "4cde3016f7fc0ee064afdca2cc691c08a27b2fff5e51de23e9b7762188bb2871"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/tangent-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "7a062c6747d273883234c2d6df1f51efa1b0c2fae5b90ec0bdc3dbe697b62273"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.2/tangent-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "3366fe586cb6978416a3add758162fe2ddee0f869e445304d3c0c4894468d039"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/tangent-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "9b2060b673f8354b7d89de0a63f65709b38fa6300e6fc0b79b8e0f3656769059"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.2/tangent-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "25df544d2ca1ef09188430c0092d3f4d06c4708cf2e3a30a67044ed1f326bf8b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.0/tangent-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "391aa62963d7c353d36e807851fbba8bb9e6d805cf256fb9e2b9a32e3863aae5"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.2/tangent-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "26b4a5afd451952b3974332e9509ef3f236d832eceaa2f95a966d03828aecaab"
     end
   end
 
