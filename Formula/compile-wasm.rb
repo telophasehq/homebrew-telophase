@@ -1,25 +1,25 @@
 class CompileWasm < Formula
   desc "The compile-wasm application"
   homepage "https://github.com/telophasehq/tangent"
-  version "0.1.3"
+  version "0.1.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.3/compile-wasm-aarch64-apple-darwin.tar.xz"
-      sha256 "684b1c29bfeffe688d4bc2dfc7bf403df6757e612fbfec6d8b15b493501bb593"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.4/compile-wasm-aarch64-apple-darwin.tar.xz"
+      sha256 "37b7dcdc751f05b7f583cc633643bb76e7e61d00217874d0a25ec70da85bc257"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.3/compile-wasm-x86_64-apple-darwin.tar.xz"
-      sha256 "ff96eced09f9200a2167931e93736c2472b90d398ac3f324ba3faff2884095be"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.4/compile-wasm-x86_64-apple-darwin.tar.xz"
+      sha256 "211d00eaf7034c2892a2ebcccf8c17c981b3494ad3ec01c076edd4569be777cc"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.3/compile-wasm-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "25235911ffb99ac68ed0dcbc990366c2b67f8c4a5aa42298d957d05b8e7e52a4"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.4/compile-wasm-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8f16e1ec7102895f0e66536ee7d12c17299b0b3167903f89dd0b9712edf9ecb9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.3/compile-wasm-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "64e17f5af63d008d51ccfcfec7ba41ec443c6bced78e6456e25499c145f1b53c"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.4/compile-wasm-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c2f015fb444106c4fe9c37575b781c37728e04303fd536d261a4ca2a92819075"
     end
   end
 
