@@ -1,25 +1,25 @@
 class TangentShared < Formula
   desc "The tangent-shared application"
   homepage "https://github.com/telophasehq/tangent"
-  version "0.1.5"
+  version "0.1.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.5/tangent-shared-aarch64-apple-darwin.tar.xz"
-      sha256 "143dcafcc19942a0ab41ed019b0de6a8846383b84a4a63cfc5d1a194dcadfbd9"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.7/tangent-shared-aarch64-apple-darwin.tar.xz"
+      sha256 "0c73cfb0b070eeced4265c26e987aa331292b54247876887ed8ce39bce2e63c2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.5/tangent-shared-x86_64-apple-darwin.tar.xz"
-      sha256 "e1b772eb6c552e1cc9a0301b9d6954408348ada40061a21937ab9e795509047a"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.7/tangent-shared-x86_64-apple-darwin.tar.xz"
+      sha256 "fd7e32ba42f9dde2559a59dca7c7413cc389339da58cc750b603743d3c65686c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.5/tangent-shared-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e36118907d57066a673b85d267fb24419cbd6145a482b69edbc46485095af978"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.7/tangent-shared-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ed626714d98d31b34a0bfb43c150b9e771019e8d28458d3d9a141cd96e81737a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.5/tangent-shared-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9345195d00c5a079ae30567bbb73bcd55dd99b7057e85c3bc23b7e973e429af3"
+      url "https://github.com/telophasehq/tangent/releases/download/v0.1.7/tangent-shared-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3431f8eda963508db20f7889324cc7e3df11cfe9dd685b086440b827ba8ca8b0"
     end
   end
 
