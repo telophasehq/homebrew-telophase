@@ -1,25 +1,25 @@
 class TangentCli < Formula
   desc "The tangent-cli application"
-  homepage "https://github.com/telophasehq/tangent"
-  version "0.1.9"
+  homepage "https://github.com/EthanBlackburn/tangent"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.9/tangent-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "7b13b8b6d73d2074914cc92223962c39c321a1e947cbb6259342989c575d264b"
+      url "https://github.com/EthanBlackburn/tangent/releases/download/v0.2.0/tangent-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "934fcda898bed184033bac59a558679f1432cf75ec884aa2ffac0d4ea35187e0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.9/tangent-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "b85895bdd7972c0594f088525e9bad0fe287b0b08b1d260c2154b68c6fa6f353"
+      url "https://github.com/EthanBlackburn/tangent/releases/download/v0.2.0/tangent-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "8631c22d95a08e7ac9dca670f7d8fc71181840117cbd3096a8463a1da423555a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.9/tangent-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "eb0fc8112ba13eab16239762064a1814c72726f869c5deea987ae36a6d6c3284"
+      url "https://github.com/EthanBlackburn/tangent/releases/download/v0.2.0/tangent-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3e594a17b85117f21053187b44cc39241a4923860c95f72cb9c0784a40ed7c75"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.9/tangent-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5db7bdd6a758ac67828f026ed127f05eb6c0b8f9e0bdb0807a72dadd86e37c5f"
+      url "https://github.com/EthanBlackburn/tangent/releases/download/v0.2.0/tangent-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "de69e18818875eacf3626bd69f21f8c4d6afd539b6a69c12b488c3230c352780"
     end
   end
 
@@ -46,10 +46,18 @@ class TangentCli < Formula
   end
 
   def install
-    bin.install "tangent" if OS.mac? && Hardware::CPU.arm?
-    bin.install "tangent" if OS.mac? && Hardware::CPU.intel?
-    bin.install "tangent" if OS.linux? && Hardware::CPU.arm?
-    bin.install "tangent" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "tangent"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "tangent"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "tangent"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "tangent"
+    end
 
     install_binary_aliases!
 
