@@ -1,25 +1,25 @@
 class TangentRuntime < Formula
   desc "The tangent-runtime application"
-  homepage "https://github.com/telophasehq/tangent"
-  version "0.1.9"
+  homepage "https://github.com/EthanBlackburn/tangent"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.9/tangent-runtime-aarch64-apple-darwin.tar.xz"
-      sha256 "9f93e5048b6ca88f4cb1323e44cfa14f44d64acaabfebd7f3aa596d68933efd1"
+      url "https://github.com/EthanBlackburn/tangent/releases/download/v0.2.0/tangent-runtime-aarch64-apple-darwin.tar.xz"
+      sha256 "2ceeb321e6803f4d6e58688d947bb3640ef0062db1e08e8d82e6b5935a9b42c1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.9/tangent-runtime-x86_64-apple-darwin.tar.xz"
-      sha256 "0ad0197257aa419a1905230fa2db6f2d0d942bee18f94f9ff195735822b357e9"
+      url "https://github.com/EthanBlackburn/tangent/releases/download/v0.2.0/tangent-runtime-x86_64-apple-darwin.tar.xz"
+      sha256 "2f5a365c05e702f3baa8469989762c4f600515a2314b772d0f4b2de5716ec776"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.9/tangent-runtime-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c163b4e3e0cefee081eeac356cefaff67074be2483f7332d7613719fdce8b4d9"
+      url "https://github.com/EthanBlackburn/tangent/releases/download/v0.2.0/tangent-runtime-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b94c6eeb3c98fffeedce63d27126bbd0e79c5ae72b930e4e9b90298e00842546"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/telophasehq/tangent/releases/download/v0.1.9/tangent-runtime-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1d1eb1b1c2f0ead63de454d5d1f8bfb968af43d03591b86265719cdecc374a6e"
+      url "https://github.com/EthanBlackburn/tangent/releases/download/v0.2.0/tangent-runtime-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "77de5a50691322879e92348d6a74e2cdc38558fca293f1e67b46489fa6f10286"
     end
   end
 
@@ -46,10 +46,18 @@ class TangentRuntime < Formula
   end
 
   def install
-    bin.install "tangentd" if OS.mac? && Hardware::CPU.arm?
-    bin.install "tangentd" if OS.mac? && Hardware::CPU.intel?
-    bin.install "tangentd" if OS.linux? && Hardware::CPU.arm?
-    bin.install "tangentd" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "tangentd"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "tangentd"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "tangentd"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "tangentd"
+    end
 
     install_binary_aliases!
 
